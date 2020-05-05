@@ -24,7 +24,7 @@
       <button class="fn">F10</button>
       <button class="fn">F11</button>
       <button class="fn">F12</button>
-      <button onclick="window.location.href='https://onclick-70491.firebaseapp.com/';" class="fn"><i class="fa fa-power-off" aria-hidden="true"></i></button>
+  	  <button onclick="fun()" class="fn"><i class="fa fa-power-off" aria-hidden="true"></i></button>
 
             </div>
             <div class="row2">
@@ -103,5 +103,11 @@
 </div>
     <div class="touchpad"></div>
 </div>
+<script>
+function fun() {
+ window.alert("power state changed");
+ window.location.replace("https://onclick-70491.firebaseapp.com/");
+ }
+</script>
 </body>
 </html>
