@@ -109,24 +109,33 @@
 <audio id="myAudio1">
 <source src="sword.mp3" type="audio/mpeg">
 </audio>
+<audio id="myAudio2">
+<source src="Swordo.mp3" type="audio/mpeg">
+</audio>
 <script type="text/javascript">
 var x= document.getElementById("myAudio");
 var y= document.getElementById("myAudio1");
+var z= document.getElementById("myAudio2");
 var count=0;
 function fun() {
 count=count+1;
-
-if(count%2!=0)
+if(count==1)
  {
  window.alert("Powering colorful theme !!!");
  x.play();
  document.getElementById('pagestyle').setAttribute('href',"styles.css");
  }
- else
+ if(count==2){
+ window.alert("Powering golden theme !!!");
+ z.play();
+ document.getElementById('pagestyle').setAttribute('href',"styleg.css");
+  }
+ if(count==3)
  {
  window.alert("Powering realistic theme !!!");
  y.play();
  document.getElementById('pagestyle').setAttribute('href',"style.css");
+ count=0;
  }
  }
 </script>
