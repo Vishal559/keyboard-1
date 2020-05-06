@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keyboard</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link  id="pagestyle" rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -103,10 +103,16 @@
 </div>
     <div class="touchpad"></div>
 </div>
-<script>
+<script type="text/javascript">
+var count=0;
 function fun() {
- window.alert("switching to colorful theme !!!");
- window.location.replace("https://onclick-70491.firebaseapp.com/");
+count=count+1;
+window.alert("Powering theme !!!");
+if(count%2!=0)
+ {document.getElementById('pagestyle').setAttribute('href',"styles.css");}
+ else
+ {document.getElementById('pagestyle').setAttribute('href',"style.css");}
+ 
  }
 </script>
 </body>
