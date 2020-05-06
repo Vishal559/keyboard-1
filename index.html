@@ -107,12 +107,16 @@
 var count=0;
 function fun() {
 count=count+1;
-window.alert("Powering theme !!!");
 if(count%2!=0)
- {document.getElementById('pagestyle').setAttribute('href',"styles.css");}
+ {
+ window.alert("Powering colorful theme !!!");
+ document.getElementById('pagestyle').setAttribute('href',"styles.css");
+ }
  else
- {document.getElementById('pagestyle').setAttribute('href',"style.css");}
- 
+ {
+ window.alert("Powering realistic theme !!!");
+ document.getElementById('pagestyle').setAttribute('href',"style.css");
+ }
  }
 </script>
 </body>
