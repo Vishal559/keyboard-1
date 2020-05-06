@@ -103,10 +103,15 @@
 </div>
     <div class="touchpad"></div>
 </div>
+<audio id="myAudio">
+<source src="tone.mp3" type="audio/mpeg">
+</audio>
 <script type="text/javascript">
+var x= document.getElementById("myAudio");
 var count=0;
 function fun() {
 count=count+1;
+x.play();
 if(count%2!=0)
  {
  window.alert("Powering colorful theme !!!");
