@@ -106,20 +106,26 @@
 <audio id="myAudio">
 <source src="tone.mp3" type="audio/mpeg">
 </audio>
+<audio id="myAudio1">
+<source src="sword.mp3" type="audio/mpeg">
+</audio>
 <script type="text/javascript">
 var x= document.getElementById("myAudio");
+var y= document.getElementById("myAudio1");
 var count=0;
 function fun() {
 count=count+1;
-x.play();
+
 if(count%2!=0)
  {
  window.alert("Powering colorful theme !!!");
+ x.play();
  document.getElementById('pagestyle').setAttribute('href',"styles.css");
  }
  else
  {
  window.alert("Powering realistic theme !!!");
+ y.play();
  document.getElementById('pagestyle').setAttribute('href',"style.css");
  }
  }
