@@ -70,7 +70,7 @@ background-repeat: no-repeat;
         background:black;
         border: 2px solid red;
         -moz-border-radius: 5px;
-        -webkit-border-radius: 5px
+        -webkit-border-radius: 5px;
       }
 #clear{
     width: 69px;
