@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <center><textarea name="out" id="output" cols="60" rows="4" placeholder="Here you are!!!"></textarea></center>
     <div class="container">
     <div class="containerChild">
         <div class="row1">
@@ -28,64 +29,64 @@
 
             </div>
             <div class="row2">
-      <button class="btn">~<br>`</button>
-      <button class="btn">!<br>1</button>
-      <button class="btn">@<br>2</button>
-      <button class="btn">#<br>3</button>
-      <button class="btn">$<br>4</button>
-      <button class="btn">%<br>5</button>
-      <button class="btn">^<br>6</button>
-      <button class="btn">&<br>7</button>
-      <button class="btn">*<br>8</button>
-      <button class="btn">(<br>9</button>
-      <button class="btn">)<br>0</button>
-      <button class="btn">_<br>-</button>
-      <button class="btn">+<br>=</button>
-      <button class="btn" id="clear">Delete</button>
+      <button class="btn" onclick="num('`')">~<br>`</button>
+      <button class="btn" onclick="num('1')">!<br>1</button>
+      <button class="btn" onclick="num('2')">@<br>2</button>
+      <button class="btn" onclick="num('3')">#<br>3</button>
+      <button class="btn" onclick="num('4')">$<br>4</button>
+      <button class="btn" onclick="num('5')">%<br>5</button>
+      <button class="btn" onclick="num('6')">^<br>6</button>
+      <button class="btn" onclick="num('7')">&<br>7</button>
+      <button class="btn" onclick="num('8')">*<br>8</button>
+      <button class="btn" onclick="num('9')">(<br>9</button>
+      <button class="btn" onclick="num('0')">)<br>0</button>
+      <button class="btn" onclick="char('-')">_<br>-</button>
+      <button class="btn" onclick="char('=')">+<br>=</button>
+      <button class="btn" id="clear" onclick="clear()">Delete</button>
           </div>
           <div class="row3">
     <button class="btn" Id="tab">Tab</button>
-    <button class="btn">Q</button>
-    <button class="btn">W</button>
-    <button class="btn">E</button>
-    <button class="btn">R</button>
-    <button class="btn">T</button>
-    <button class="btn">Y</button>
-    <button class="btn">U</button>
-    <button class="btn">I</button>
-    <button class="btn">O</button>
-    <button class="btn">P</button>
-    <button class="btn">{<br>[</button>
-    <button class="btn">}<br>]</button>
-    <button class="btn" id="sp">|<br>\</button>
+    <button class="btn" onclick="char('q')">Q</button>
+    <button class="btn" onclick="char('w')">W</button>
+    <button class="btn" onclick="char('e')">E</button>
+    <button class="btn" onclick="char('r')">R</button>
+    <button class="btn" onclick="char('t')">T</button>
+    <button class="btn" onclick="char('y')">Y</button>
+    <button class="btn" onclick="char('u')">U</button>
+    <button class="btn" onclick="char('i')">I</button>
+    <button class="btn" onclick="char('o')">O</button>
+    <button class="btn" onclick="char('p')">P</button>
+    <button class="btn" onclick="char('[')">{<br>[</button>
+    <button class="btn" onclick="char(']')">}<br>]</button>
+    <button class="btn" onclick="char('\\')"id="sp">|<br>\</button>
             </div>
             <div class="row4">
-    <button class="btn" id="cp">CapsLK</button>
-    <button class="btn">A</button>
-    <button class="btn">S</button>
-    <button class="btn">D</button>
-    <button class="btn">F</button>
-    <button class="btn">G</button>
-    <button class="btn">H</button>
-    <button class="btn">J</button>
-    <button class="btn">K</button>
-    <button class="btn">L</button>
-    <button class="btn">:<br>;</button>
-    <button class="btn">"<br>'</button>
-    <button class="btn" id="enter">Enter</button>
+    <button class="btn" id="cp" onclick="cap()">CapsLK</button>
+    <button class="btn" onclick="char('a')">A</button>
+    <button class="btn" onclick="char('s')">S</button>
+    <button class="btn" onclick="char('d')">D</button>
+    <button class="btn" onclick="char('f')">F</button>
+    <button class="btn" onclick="char('g')">G</button>
+    <button class="btn" onclick="char('h')">H</button>
+    <button class="btn" onclick="char('j')">J</button>
+    <button class="btn" onclick="char('k')">K</button>
+    <button class="btn" onclick="char('l')">L</button>
+    <button class="btn" onclick="char(';')">:<br>;</button>
+    <button class="btn" onclick="char(''')">"<br>'</button>
+    <button class="btn" id="enter" onclick="enter()">Enter</button>
             </div>
             <div class="row5">
     <button class="btn" id="shift">Shift</button>
-    <button class="btn">Z</button>
-    <button class="btn">X</button>
-    <button class="btn">C</button>
-    <button class="btn">V</button>
-    <button class="btn">B</button>
-    <button class="btn">N</button>
-    <button class="btn">M</button>
-    <button class="btn"> < <br>,</button>
-    <button class="btn">><br>.</button>
-    <button class="btn">?<br>/</button>
+    <button class="btn" onclick="char('z')">Z</button>
+    <button class="btn" onclick="char('x')">X</button>
+    <button class="btn" onclick="char('c')">C</button>
+    <button class="btn" onclick="char('v')">V</button>
+    <button class="btn" onclick="char('b')">B</button>
+    <button class="btn" onclick="char('n')">N</button>
+    <button class="btn" onclick="char('m')">M</button>
+    <button class="btn" onclick="char(',')"> < <br>,</button>
+    <button class="btn" onclick="char('.')">><br>.</button>
+    <button class="btn" onclick="char('/')">?<br>/</button>
     <button class="btn" id="shift">Shift</button>
             </div>
             <div class="row6">
@@ -93,7 +94,7 @@
     <button class="btn">Fn</button>
     <button class="btn"><i class="fa fa-windows" aria-hidden="true"></i></button>
     <button class="btn">Alt</button>
-    <button class="btn" id="space">Space</button>
+    <button class="btn" id="space" onclick="char(' ')">Space</button>
     <button class="btn">Alt</button>
     <button class="btn">Ctrl</button>
     <button class="btn"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></button>
@@ -138,6 +139,16 @@ if(count==1)
  count=0;
  }
  }
+ function num (press){
+            document.getElementById('output').value += press;
+        }
+ function char(press){
+            document.getElementById('output').value +=press;
+            
+        }
+ function enter(){
+        document.getElementById('output').value +='\n';
+    }
 </script>
 </body>
 </html>
