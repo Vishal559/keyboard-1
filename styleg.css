@@ -1,7 +1,7 @@
 body{
-background: #BBD2C5;  
-background: -webkit-linear-gradient(to right, #BBD2C5, #536976, #BBD2C5) fixed;
-background: linear-gradient(to right, #BBD2C5, #536976, #BBD2C5) fixed;
+background: #334d50;
+background: -webkit-linear-gradient(to left, #334d50, #cbcaa5) fixed;
+background: linear-gradient(to left, #334d50, #cbcaa5) fixed;
 background-repeat: no-repeat;
 
     }
@@ -10,7 +10,7 @@ background-repeat: no-repeat;
         width: 700px;
         height: 450px;
         background-color: black;
-        border: 1px solid #d4af37;
+        border: 1px solid red;
         border-radius: 30px;
         margin: 100px auto;
         }
@@ -24,7 +24,7 @@ background-repeat: no-repeat;
    background: linear-gradient(to left,#FFFF99, #ffffff, #ffff99);
 
     
-    border: 2px solid #d4af37;
+    border: 1px solid red;
     border-radius: 20px;
     margin:auto;
     margin-top: 8px;
@@ -37,7 +37,7 @@ background-repeat: no-repeat;
         background: -webkit-linear-gradient(to left,#FFFF99, #ffffff, #ffff99);
         background: linear-gradient(to left,#FFFF99, #ffffff, #ffff99);
 
-        border: 2px solid #c6a12a;
+        border: 1px solid red;
         border-radius: 10px;
         margin:auto;
         margin-top: 10px;
@@ -54,7 +54,7 @@ background-repeat: no-repeat;
         text-align: center;
         color: white;
         background:black;
-        border: 2px solid #9b870c;
+        border: 2px solid red;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
         cursor: pointer;
@@ -68,7 +68,7 @@ background-repeat: no-repeat;
 	    cursor:pointer;
         color: white;
         background:black;
-        border: 2px solid #9b870c;
+        border: 2px solid red;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px
       }
@@ -92,4 +92,13 @@ background-repeat: no-repeat;
 }
 #space{
     width:245px;
+}
+.btn:active { 
+    transform: scale(0.80); 
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+.fn:active {
+    background-color:grey;
+    transform: scale(0.80); 
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
 }
