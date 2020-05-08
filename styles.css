@@ -1,5 +1,5 @@
 body{
-overflow: hidden;
+
 background: #abbaab;
 background: -webkit-linear-gradient(to right, #abbaab, #ffffff) fixed;
 background: linear-gradient(to right, #abbaab, #ffffff) fixed;
@@ -9,7 +9,7 @@ background-repeat: no-repeat;
 	#output{
 		background-color:rgba(0,0,0,0);
 		width: 700px;
-		height: 75px;
+		height: 50px;
 		margin-top:20px;
         margin-left: auto;
 		color:black;
@@ -27,7 +27,7 @@ background-repeat: no-repeat;
  
         border: 1px solid black;
         border-radius: 30px;
-        margin: 100px auto;
+        margin: 50px auto;
         }
 
     .containerChild{
