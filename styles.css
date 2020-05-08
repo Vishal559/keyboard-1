@@ -6,13 +6,22 @@ background: linear-gradient(to right, #abbaab, #ffffff) fixed;
 background-repeat: no-repeat;
 
     }
+	#output{
+		background-color:rgba(0,0,0,0);
+		display: block;
+		margin-top:20px;
+        margin-left: auto;
+		color:white;
+        margin-right: auto;
+		font-family:"Comic Sans MS", cursive, sans-serif;
+	}
     .container{
     
         width: 700px;
         height: 450px;
-        background: #ff9966;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #ff9966;
+        background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
+        background: linear-gradient(to right, #ff5e62, #ff9966);
 
  
         border: 1px solid black;
@@ -39,9 +48,9 @@ background-repeat: no-repeat;
     
         width: 235px;
         height: 130px;
-        background: #C6FFDD;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #C6FFDD; 
+        background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); 
+        background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); 
 
         border: 1px solid black;
         border-radius: 10px;

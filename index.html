@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <center><textarea name="out" id="output" cols="60" rows="4" placeholder="Here you are!!!"></textarea></center>
+    <center><textarea id="output" cols="60" rows="4" placeholder="Here you are!!!"></textarea></center>
     <div class="container">
     <div class="containerChild">
         <div class="row1">
@@ -42,7 +42,7 @@
       <button class="btn" onclick="num('0')">)<br>0</button>
       <button class="btn" onclick="char('-')">_<br>-</button>
       <button class="btn" onclick="char('=')">+<br>=</button>
-      <button class="btn" id="clear" onclick="clear()">Delete</button>
+      <button class="btn" onclick="del()" id="clear">Delete</button>
           </div>
           <div class="row3">
     <button class="btn" Id="tab">Tab</button>
@@ -77,13 +77,13 @@
             </div>
             <div class="row5">
     <button class="btn" id="shift">Shift</button>
-    <button class="btn" onclick="char('z')">Z</button>
-    <button class="btn" onclick="char('x')">X</button>
-    <button class="btn" onclick="char('c')">C</button>
-    <button class="btn" onclick="char('v')">V</button>
-    <button class="btn" onclick="char('b')">B</button>
-    <button class="btn" onclick="char('n')">N</button>
-    <button class="btn" onclick="char('m')">M</button>
+    <button class="btn" onclick="char('q')">Z</button>
+    <button class="btn" onclick="char('q')">X</button>
+    <button class="btn" onclick="char('q')">C</button>
+    <button class="btn" onclick="char('q')">V</button>
+    <button class="btn" onclick="char('q')">B</button>
+    <button class="btn" onclick="char('q')">N</button>
+    <button class="btn" onclick="char('q')">M</button>
     <button class="btn" onclick="char(',')"> < <br>,</button>
     <button class="btn" onclick="char('.')">><br>.</button>
     <button class="btn" onclick="char('/')">?<br>/</button>
@@ -113,11 +113,20 @@
 <audio id="myAudio2">
 <source src="Swordo.mp3" type="audio/mpeg">
 </audio>
+<audio id="myAudio3">
+<source src="cap.mp3" type="audio/mpeg">
+</audio>
 <script type="text/javascript">
 var x= document.getElementById("myAudio");
 var y= document.getElementById("myAudio1");
 var z= document.getElementById("myAudio2");
+var k= document.getElementById("myAudio3");
 var count=0;
+var cp=1;
+function cap() {
+k.play();
+cp=cp+1;
+}
 function fun() {
 count=count+1;
 if(count==1)
@@ -143,12 +152,20 @@ if(count==1)
             document.getElementById('output').value += press;
         }
  function char(press){
-            document.getElementById('output').value +=press;
-            
+ if(cp%2==0){
+ document.getElementById('output').value +=press.toUpperCase();
+ }
+  else{
+  document.getElementById('output').value +=press;
+  }           
         }
  function enter(){
         document.getElementById('output').value +='\n';
     }
+ function del(){
+  var d  = document.getElementById('output').value;
+    document.getElementById('output').value=d.substring(0,d.length -1);
+ }
 </script>
 </body>
 </html>

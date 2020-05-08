@@ -5,6 +5,14 @@ background: linear-gradient(to right, #FFFFFF, #FFEFBA) fixed;
 background-repeat: no-repeat;
 
     }
+	#output{
+		background-color:rgba(0,0,0,0);
+		display: block;
+		margin-top:20px;
+        margin-left: auto;
+        margin-right: auto;
+		font-family:"Comic Sans MS", cursive, sans-serif;
+	}
     .container{
     
         width: 700px;
