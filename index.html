@@ -165,10 +165,12 @@ if(count==1)
         }
  function char(press){
  if(cp%2==0){
- document.getElementById('output').value +=press.toUpperCase();
+ if(shift%2==0){document.getElementById('output').value +=press;}
+ else{document.getElementById('output').value +=press.toUpperCase();}
  }
-  else{
-  document.getElementById('output').value +=press;
+ if(cp%2!=0){
+ if(shift%2==0){document.getElementById('output').value +=press.toUpperCase();}
+ else{document.getElementById('output').value +=press;}
   }           
         }
  function enter(){
