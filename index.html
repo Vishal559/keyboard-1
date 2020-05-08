@@ -29,19 +29,19 @@
 
             </div>
             <div class="row2">
-      <button class="btn" onclick="num('`')">~<br>`</button>
-      <button class="btn" onclick="num('1')">!<br>1</button>
-      <button class="btn" onclick="num('2')">@<br>2</button>
-      <button class="btn" onclick="num('3')">#<br>3</button>
-      <button class="btn" onclick="num('4')">$<br>4</button>
-      <button class="btn" onclick="num('5')">%<br>5</button>
-      <button class="btn" onclick="num('6')">^<br>6</button>
-      <button class="btn" onclick="num('7')">&<br>7</button>
-      <button class="btn" onclick="num('8')">*<br>8</button>
-      <button class="btn" onclick="num('9')">(<br>9</button>
-      <button class="btn" onclick="num('0')">)<br>0</button>
-      <button class="btn" onclick="char('-')">_<br>-</button>
-      <button class="btn" onclick="char('=')">+<br>=</button>
+      <button class="btn" onclick="num('`'); num1('~')">~<br>`</button>
+      <button class="btn" onclick="num('1'); num1('!')">!<br>1</button>
+      <button class="btn" onclick="num('2'); num1('@')">@<br>2</button>
+      <button class="btn" onclick="num('3'); num1('#')">#<br>3</button>
+      <button class="btn" onclick="num('4'); num1('$')">$<br>4</button>
+      <button class="btn" onclick="num('5'); num1('%')">%<br>5</button>
+      <button class="btn" onclick="num('6'); num1('^')">^<br>6</button>
+      <button class="btn" onclick="num('7'); num1('&')">&<br>7</button>
+      <button class="btn" onclick="num('8'); num1('*')">*<br>8</button>
+      <button class="btn" onclick="num('9'); num1('(')">(<br>9</button>
+      <button class="btn" onclick="num('0'); num1(')')">)<br>0</button>
+      <button class="btn" onclick="num('-'); num1('_')">_<br>-</button>
+      <button class="btn" onclick="num('='); num1('+')">+<br>=</button>
       <button class="btn" onclick="del()" id="clear">Delete</button>
           </div>
           <div class="row3">
@@ -56,9 +56,9 @@
     <button class="btn" onclick="char('i')">I</button>
     <button class="btn" onclick="char('o')">O</button>
     <button class="btn" onclick="char('p')">P</button>
-    <button class="btn" onclick="char('[')">{<br>[</button>
-    <button class="btn" onclick="char(']')">}<br>]</button>
-    <button class="btn" onclick="char('\\')"id="sp">|<br>\</button>
+    <button class="btn" onclick="num('['); num1('{')">{<br>[</button>
+    <button class="btn" onclick="num(']'); num1('}')">}<br>]</button>
+    <button class="btn" onclick="num('\\'); num1('|')"id="sp">|<br>\</button>
             </div>
             <div class="row4">
     <button class="btn" id="cp" onclick="cap()">CapsLK</button>
@@ -71,12 +71,12 @@
     <button class="btn" onclick="char('j')">J</button>
     <button class="btn" onclick="char('k')">K</button>
     <button class="btn" onclick="char('l')">L</button>
-    <button class="btn" onclick="char(';')">:<br>;</button>
-    <button class="btn" onclick="char(''')">"<br>'</button>
+    <button class="btn" onclick="num(';'); num1(':')">:<br>;</button>
+    <button class="btn" onclick="num('\''); "num("\"")">"<br>'</button>
     <button class="btn" id="enter" onclick="enter()">Enter</button>
             </div>
             <div class="row5">
-    <button class="btn" id="shift">Shift</button>
+    <button class="btn" onclick="shi()" id="shift">Shift</button>
     <button class="btn" onclick="char('q')">Z</button>
     <button class="btn" onclick="char('q')">X</button>
     <button class="btn" onclick="char('q')">C</button>
@@ -84,10 +84,10 @@
     <button class="btn" onclick="char('q')">B</button>
     <button class="btn" onclick="char('q')">N</button>
     <button class="btn" onclick="char('q')">M</button>
-    <button class="btn" onclick="char(',')"> < <br>,</button>
-    <button class="btn" onclick="char('.')">><br>.</button>
-    <button class="btn" onclick="char('/')">?<br>/</button>
-    <button class="btn" id="shift">Shift</button>
+    <button class="btn" onclick="num(','); num1('<')"> < <br>,</button>
+    <button class="btn" onclick="num('.'); num1('>')">><br>.</button>
+    <button class="btn" onclick="num('/'); num1('?')">?<br>/</button>
+    <button class="btn" onclick="shi()" id="shift">Shift</button>
             </div>
             <div class="row6">
     <button class="btn">Ctrl</button>
@@ -123,6 +123,13 @@ var z= document.getElementById("myAudio2");
 var k= document.getElementById("myAudio3");
 var count=0;
 var cp=1;
+shift=1;
+
+function shi() {
+k.play();
+shift=shift+1;
+}
+
 function cap() {
 k.play();
 cp=cp+1;
@@ -149,7 +156,12 @@ if(count==1)
  }
  }
  function num (press){
-            document.getElementById('output').value += press;
+            if(shift%2!=0)
+			{document.getElementById('output').value += press;}
+        }
+ function num1 (press){
+            if(shift%2==0)
+			{document.getElementById('output').value += press;}
         }
  function char(press){
  if(cp%2==0){
