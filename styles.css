@@ -1,5 +1,5 @@
 body{
-
+overflow: hidden;
 background: #abbaab;
 background: -webkit-linear-gradient(to right, #abbaab, #ffffff) fixed;
 background: linear-gradient(to right, #abbaab, #ffffff) fixed;
@@ -8,10 +8,11 @@ background-repeat: no-repeat;
     }
 	#output{
 		background-color:rgba(0,0,0,0);
-		display: block;
+		width: 700px;
+		height: 75px;
 		margin-top:20px;
         margin-left: auto;
-		color:white;
+		color:black;
         margin-right: auto;
 		font-family:"Comic Sans MS", cursive, sans-serif;
 	}
@@ -109,11 +110,12 @@ background-repeat: no-repeat;
     width:245px;
 }
 .btn:active { 
-    transform: scale(0.80); 
+    background-color:grey;
+    transform: scale(0.90); 
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
 }
 .fn:active {
     background-color:grey;
-    transform: scale(0.80); 
+    transform: scale(0.90); 
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
 }
