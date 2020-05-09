@@ -72,7 +72,7 @@
     <button class="btn" onclick="char('k')">K</button>
     <button class="btn" onclick="char('l')">L</button>
     <button class="btn" onclick="num(';'); num1(':')">:<br>;</button>
-    <button class="btn" onclick="num('\''); "num('\"')">"<br>'</button>
+    <button class="btn" onclick="spl()">"<br>'</button>
     <button class="btn" id="enter" onclick="enter()">Enter</button>
             </div>
             <div class="row5">
@@ -107,19 +107,11 @@
 <audio id="myAudio">
 <source src="tone.mp3" type="audio/mpeg">
 </audio>
-<audio id="myAudio1">
-<source src="sword.mp3" type="audio/mpeg">
-</audio>
-<audio id="myAudio2">
-<source src="Swordo.mp3" type="audio/mpeg">
-</audio>
 <audio id="myAudio3">
 <source src="cap.mp3" type="audio/mpeg">
 </audio>
 <script type="text/javascript">
 var x= document.getElementById("myAudio");
-var y= document.getElementById("myAudio1");
-var z= document.getElementById("myAudio2");
 var k= document.getElementById("myAudio3");
 var count=0;
 var cp=1;
@@ -159,13 +151,13 @@ if(count==1)
  }
  if(count==2){
  window.alert("Powering golden theme !!!");
- z.play();
+ x.play();
  document.getElementById('pagestyle').setAttribute('href',"styleg.css");
   }
  if(count==3)
  {
  window.alert("Powering realistic theme !!!");
- y.play();
+ x.play();
  document.getElementById('pagestyle').setAttribute('href',"style.css");
  count=0;
  }
@@ -199,6 +191,10 @@ if(count==1)
  function del(){
   var d  = document.getElementById('output').value;
     document.getElementById('output').value=d.substring(0,d.length -1);
+ }
+ function spl(){
+ num('\'');
+ num1('\"');
  }
 </script>
 </body>
