@@ -126,14 +126,29 @@ var cp=1;
 shift=1;
 
 function shi() {
+var click = document.getElementById("shift");
+if(shift%2!=0){
+click.style.backgroundColor = "#FFE4E1";
+}
+else{
+click.style.backgroundColor = "#000000";
+}
 k.play();
 shift=shift+1;
 }
 
 function cap() {
+var click = document.getElementById("cp");
+if(cp%2!=0){
+click.style.backgroundColor = "#FFE4E1";
+}
+else{
+click.style.backgroundColor = "#000000";
+}
 k.play();
 cp=cp+1;
 }
+
 function fun() {
 count=count+1;
 if(count==1)
@@ -155,14 +170,17 @@ if(count==1)
  count=0;
  }
  }
+ 
  function num (press){
             if(shift%2!=0)
 			{document.getElementById('output').value += press;}
         }
+		
  function num1 (press){
             if(shift%2==0)
 			{document.getElementById('output').value += press;}
         }
+		
  function char(press){
  if(cp%2==0){
  if(shift%2==0){document.getElementById('output').value +=press;}
@@ -173,9 +191,11 @@ if(count==1)
  else{document.getElementById('output').value +=press;}
   }           
         }
+		
  function enter(){
         document.getElementById('output').value +='\n';
     }
+	
  function del(){
   var d  = document.getElementById('output').value;
     document.getElementById('output').value=d.substring(0,d.length -1);
